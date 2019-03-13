@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <stdlib.h>
+int x[100][100],v[1000000];
+int main()
+{
+ int aux=1,col,suma,rand,i,j,A[50][50],tab[50][50];
+ printf("Randuri= ");
+scanf("%d", &rand);
+printf("Coloane= ");
+scanf("%d", &col);
+
+  for(i = 0; i < rand;i++){
+ for(j = 0; j < col; j++){
+ printf("A[%d][%d]=", i,j);
+ scanf("%d", &A[i][j]);}}
+ for(i = 0; i < rand;i++){
+ for(j = aux; j <= col; j++){if(j==col){aux++;
+ break;}
+ printf("%3d", A[i][j]);}}
+    return 0;
+}
