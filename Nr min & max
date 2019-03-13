@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <stdlib.h>
+int x[100][100],v[1000000];
+int main()
+{
+    int min=10000000,n,m,nrmaxim=0,solutii[100], z=0,maximap=0;
+printf("Numar linii= ");
+scanf("%d",&n);
+printf("Numar coloane= ");
+scanf("%d",&m);
+ for(int i=0;i<n;i++)
+for(int j=0;j<m;j++)
+{
+printf("x[%d][%d]= ",i,j);
+scanf("%d", &x[i][j]);
+if(x[i][j]>nrmaxim) nrmaxim=x[i][j];
+if(x[i][j]<min) min=x[i][j];
+}
+
+printf("\nNumarul maxim: %d",nrmaxim);
+printf("\nNumarul minim: %d",min);
+
+    return 0;
+}
