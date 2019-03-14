@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int aux=1,col,suma,rand,i,j,A[50][50],tab[50][50];
+ printf("Randuri= ");
+scanf("%d", &rand);
+printf("Coloane= ");
+scanf("%d", &col);
+
+  for(i = 0; i < rand;i++){
+ for(j = 0; j < col; j++){
+ printf("A[%d][%d]=", i,j);
+ scanf("%d", &A[i][j]);}}
+
+  for(int i=0;i<col;i++)
+for(int j=0;j<rand;j++){
+    tab[i][j]=A[j][i];
+    printf("%4d", tab[i][j]);}
+
+
+    return 0;
+}
