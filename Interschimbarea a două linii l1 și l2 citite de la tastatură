@@ -1,0 +1,39 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int c,y=0,x,col,rand,i,j,A[50][50],X[50][50],C[50][50];
+    printf("Randuri= ");
+    scanf("%d", &rand);
+    printf("Coloane= ");
+    scanf("%d", &col);
+    printf("Linia interschimbabila #1= ");
+    scanf("%d", &x);
+    printf("Linia interschimbabila #2= ");
+    scanf("%d", &c);
+
+    for(i = 1; i <= rand; i++)
+    {
+        for(j = 1; j <= col; j++)
+        {
+            if(i==x){ printf("A[%d][%d]=", i,j);
+            scanf("%d", &X[i][j]);}
+                  else if(i==c){ printf("A[%d][%d]=", i,j);
+            scanf("%d", &C[i][j]);}
+           else if(i){printf("A[%d][%d]=", i,j);
+            scanf("%d", &A[i][j]);}
+        }
+    }
+    for(i = 1; i <=rand; i++)
+    {
+        for(j = 1; j <=col; j++)
+        {
+                if(i==x)printf("%3d", C[c][j]);
+           else if(i==c)printf("%3d", X[x][j]);
+       else if(i) printf("%3d", A[i][j]);
+        }}
+
+
+    return 0;
+}
